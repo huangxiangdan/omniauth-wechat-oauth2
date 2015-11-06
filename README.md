@@ -30,8 +30,12 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
-You can now access the OmniAuth Wechat OAuth2 URL: `/auth/wechat`
+You can now access the OmniAuth Wechat OAuth2 URL: `/auth/wechat`  
 
+Or
+
+You can now access the OmniAuth Wechat OAuth2 URL: `/auth/wechat?state=1231212`
+ 
 ## Configuration
 
 You can configure several options, which you pass in to the `provider` method via a hash:
