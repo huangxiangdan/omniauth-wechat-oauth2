@@ -38,6 +38,7 @@ module OmniAuth
       def request_phase
         params = client.auth_code.authorize_params.merge(redirect_uri: callback_url).merge(authorize_params)
         params["appid"] = params.delete("client_id")
+        params["state"] = params.delete("state")
         redirect client.authorize_url(params)
       end
 
